@@ -1,0 +1,21 @@
+security:
+  oauth2:
+    client:
+      client-id: test
+      client-secret: test
+server:
+  port: 9090
+spring:
+  session:
+    store-type: redis
+  redis:
+    host: localhost
+    port: 6397
+
+oauth2:
+  security:
+    storeType: jwt
+    jwtSigningKey: jwtSigningKey
+    clients[0]:
+      clientId: test
+      clientSecret: test
