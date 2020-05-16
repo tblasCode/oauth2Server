@@ -31,7 +31,7 @@ public class SecurityOauth2Application {
         SpringApplication.run(SecurityOauth2Application.class, args);
     }
 
-    @GetMapping("/user")
+    @GetMapping("/users/info")
     public Object getCurrentUser1(Authentication authentication, HttpServletRequest request) throws UnsupportedEncodingException {
         log.info("【SecurityOauth2Application】 getCurrentUser1 authenticaiton={}", JsonUtil.toJson(authentication));
 
@@ -44,4 +44,5 @@ public class SecurityOauth2Application {
 
         return authentication;
     }
+    
 }

@@ -6,6 +6,16 @@ security:
 server:
   port: 9090
 spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/rci?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+      use-new-id-generator-mappings: false #`hibernate_sequence' doesn't exist
   session:
     store-type: redis
   redis:
@@ -14,8 +24,5 @@ spring:
 
 oauth2:
   security:
-    storeType: jwt
+    storeType: jdbc
     jwtSigningKey: jwtSigningKey
-    clients[0]:
-      clientId: test
-      clientSecret: test

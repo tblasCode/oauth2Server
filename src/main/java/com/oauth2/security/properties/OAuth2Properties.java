@@ -9,5 +9,4 @@ public class OAuth2Properties {
 
     private String jwtSigningKey = "jwtSigningKey";
 
-    private OAuth2ClientProperties[] clients = {};
 }

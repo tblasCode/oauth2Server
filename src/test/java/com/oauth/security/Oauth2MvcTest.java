@@ -1,4 +1,4 @@
-package cn.merryyou.security;
+package com.oauth.security;
 
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.httpBasic;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -49,7 +49,7 @@ public class Oauth2MvcTest {
     //用户名
     final static String USERNAME = "admin";
     //密码
-    final static String PASSWORD = "123456";
+    final static String PASSWORD = "admin1234";
 
     private static final String CONTENT_TYPE = "application/json;charset=UTF-8";
 

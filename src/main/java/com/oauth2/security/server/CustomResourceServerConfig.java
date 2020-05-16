@@ -22,9 +22,6 @@ import com.oauth2.security.permit.PermitAllSecurityConfig;
 @EnableResourceServer
 public class CustomResourceServerConfig extends ResourceServerConfigurerAdapter {
 
-    /**
-     * 自定义登录成功处理器
-     */
     @Autowired
     private AuthenticationSuccessHandler appLoginInSuccessHandler;
 
@@ -39,7 +36,7 @@ public class CustomResourceServerConfig extends ResourceServerConfigurerAdapter 
 
         // @formatter:off
         http.formLogin()
-                .successHandler(appLoginInSuccessHandler)//登录成功处理器
+                .successHandler(appLoginInSuccessHandler)
                 .failureHandler(appLoginFailureHandler)
                 .and()
                 .exceptionHandling().authenticationEntryPoint(new AuthExceptionEntryPoint())
